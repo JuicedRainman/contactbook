@@ -3,4 +3,3 @@ class ContactList {
         this.contacts = []; 
     }
 }
-
