@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="js/app.js/"></script>
+    <script src="js/app.js"></script>
+    <script src="js/models/contactlist.js"></script>
+    <script src="js/models/contact.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            app.init();
+        })
+    </script>
 </head>
 <body>
     <div id="container">
@@ -19,7 +26,7 @@
                     <input type="text" id="contactnumber" placeholder="contact number" required>
                     <label for="contactnumber">contact email:</label>
                     <input type="text" id="contactemail" placeholder="emailadress">
-                    <input type="submit" value="sibmut contact"> 
+                    <button id="addcontactbutton">sibmut contact</button>
                 </form>
             </div>
             <h2>Contacts</h2>
