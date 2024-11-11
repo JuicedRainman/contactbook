@@ -1,5 +1,9 @@
 class ContactList {
-    constructor(contacts) {
+    constructor() {
         this.contacts = []; 
+    }
+
+    addContact(contact) {
+        this.contacts.push(contact);
     }
 }
