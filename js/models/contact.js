@@ -5,4 +5,8 @@ class Contact {
         this.number = number;
         this.emailadress = emailadress;
     }
+
+    createHTML(){
+        return `<li>${this.name} - ${this.number} - ${this.emailadress} <button class="deleteContactButton" cid=${this.id}>verwijder Contact</button></li>`;
+    }
 }

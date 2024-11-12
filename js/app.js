@@ -1,6 +1,7 @@
 let app = (function() {
 
     let contactList;
+    let contactListContact;
 
     let init = function() {
         contactList = new ContactList();
@@ -21,18 +22,19 @@ let app = (function() {
             contactList.addContact(contact);
             displayContact(contact);
             console.log(contact);
+
+            contactListContact = document.getElementById('actualContactList')
+            contactListContact.addEventListener('click', function(e) {
+                if(e.target.classList.contains('deleteContactButton')) {
+                    contactList.clearOne(e.target.getAttribute('cid'));
+                }
+            })
         })
     }
 
     let displayContact = function(contact) {
-        document.getElementById("actualContactList").innerHTML += `<li>${contact.name} - ${contact.number} - ${contact.emailadress} <button type="button" id="removeContact">remove this contact</button></li>`;
+        document.getElementById("actualContactList").innerHTML += contact.createHTML();
     }
-
-    let removeContactButton = document.getElementById("removeContact");
-    
-    removeContactButton.addEventListener('click', () => {
-        let
-    })
 
     return{
         init : init
