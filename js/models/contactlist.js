@@ -21,4 +21,9 @@ class ContactList {
         this.contacts = this.contacts.filter(o => o.id != parseInt(index));
         this.refreshView();
     }
+
+    clearAll() {
+        this.contacts = [];
+        this.refreshView();
+    }
 }

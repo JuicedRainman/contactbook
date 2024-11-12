@@ -20,7 +20,6 @@ let app = (function() {
             let contact = new Contact(id, contactname, contactnumber, contactemail);
 
             contactList.addContact(contact);
-            displayContact(contact);
             console.log(contact);
 
             contactListContact = document.getElementById('actualContactList')
@@ -29,11 +28,13 @@ let app = (function() {
                     contactList.clearOne(e.target.getAttribute('cid'));
                 }
             })
-        })
-    }
 
-    let displayContact = function(contact) {
-        document.getElementById("actualContactList").innerHTML += contact.createHTML();
+            let buttonDE = document.getElementById("deleteAllContacts");
+            buttonDE.addEventListener('click', function() {
+                contactList.clearAll();
+            })
+        })
+
     }
 
     return{
