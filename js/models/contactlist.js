@@ -17,10 +17,23 @@ class ContactList {
         }
     }
 
+    getOne(index) {
+        return this.contacts.filter(o => o.id == parseInt(index))[0];
+    }
+
+    editOne(index, contactname, contactnumber, contactemail) {
+        let cO = this.getOne(index);
+        cO.name = contactname;
+        cO.number = contactnumber;
+        cO.emailadress = contactemail;
+        this.refreshView();
+    }
+
     clearOne(index) {
         this.contacts = this.contacts.filter(o => o.id != parseInt(index));
         this.refreshView();
     }
+
 
     clearAll() {
         this.contacts = [];

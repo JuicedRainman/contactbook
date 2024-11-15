@@ -7,6 +7,8 @@ class Contact {
     }
 
     createHTML(){
-        return `<li>${this.name} <br> ${this.number} <br> ${this.emailadress} <button class="deleteContactButton" cid=${this.id}>verwijder Contact</button></li>`;
+        return `<li>${this.name} <br> ${this.number} <br> ${this.emailadress}
+        <button class="deleteContactButton" cid=${this.id}>verwijder contact</button>
+        <button class="editContactButton" cid=${this.id}>edit contact</button></li>`;
     }
 }
