@@ -114,9 +114,9 @@ h2 {
     background: #16213e;
 }
 
-/* Delete Button in Contact Items */
-.deleteContactButton,
-.updateContactButton {
+/* Buttons inside contact list items */
+.deleteContactButton
+ {
     background-color: #e74c3c;
     color: #ffffff;
     border: none;
@@ -125,9 +125,25 @@ h2 {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 10px;
 }
 
-.deleteContactButton:hover,
-.updateContactButton:hover {
+.editContactButton {
+    background-color: #0a2a80;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.8em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.deleteContactButton:hover {
     background-color: #c0392b;
+}
+
+.editContactButton:hover {
+    background-color: #0a2a80;
 }
